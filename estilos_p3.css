@@ -1,0 +1,24 @@
+/* Estilos para el texto */
+.texto {
+  font-family: 'Arial', sans-serif; /* Familia de fuentes */
+  font-size: 24px; /* Tamaño de fuente */
+  width: 200px; /* Ancho del contenedor */
+  height: 50px; /* Alto del contenedor */
+  background-color: orange; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  line-height: 50px; /* Altura de línea */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+/* Estilos al pasar el mouse sobre el contenedor */
+.texto:hover {
+  background-color: yellow; /* Color de fondo al pasar el mouse */
+  transform: rotate(2deg); /* Inclinación del contenedor */
+}
+
+/* Estilos al hacer clic en el hipervínculo */
+.texto:active {
+  background-color: green; /* Color de fondo al hacer clic */
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra de la caja */
+}
