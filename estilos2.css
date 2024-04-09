@@ -1,0 +1,77 @@
+body {
+  background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+  background-size: cover; 
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 60px;
+}
+nav a{
+	font-weight: 600;
+	padding-right: 100px;
+}
+.nav-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Establece el color del texto */
+  padding: 10px 20px; /* Agrega espacio alrededor del texto */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+}
+.nav-link:hover {
+  background-color: #68c5b7; /* Nuevo color de fondo */
+  color: #fff; /* Nuevo color de texto */
+}
+nav ul {
+  list-style: none; 
+  display: flex; 
+  padding: 0;
+  margin: 0; 
+}
+nav ul li {
+  margin-right: 20px; 
+}
+@font-face{
+	font-family: "parrafos";
+	src: url("Nicolast.ttf") format("truetype");
+}
+#titulo1{
+	text-align: center;
+	color: white;
+	font-family: 'parrafos';
+	font-size: 170px;
+}#titulo2{
+	text-align: center;
+	color: white;
+	font-family: 'parrafos';
+	font-size: 100px;
+}
+#titulo{
+	text-align: center;
+	font-size: 45px;
+	margin-top: 20 px;
+	color: white;
+	background-color: #2D4F8A;
+}
+#fon{
+	background-color: #2D4F8A
+}
+.caja3{
+	display: inline-block;
+	width: 500px;
+	height: 700px;
+	background-color: #408DD9;
+	margin-bottom: 70px;
+	padding: 50px;
+}
+.caja4{
+	display: inline-block;
+	width: 500px;
+	height: 700px;
+	background-color: #408DD9;
+	margin-bottom: 70px;
+	padding: 40px;
+}
+
