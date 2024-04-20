@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Práctica 2</title>
-</head>
+	<title>Funciones de cadena</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="p2.css">
+	<script src="script_p2.js"></script>
 <body>
-	<header align="center">
-		<h1>El sistema Solar</h1>
-	</header>
-	<table align="center" width="75%"></table>
-	<tr>
-		<td>
-			<a href="fotos/venus.jpeg" target="iframeplanet"><img src="fotos/venus.jpeg" alt="Planeta 1 venus" width="250"></a>
-			<a href="fotos/marte.jpeg" target="iframeplanet"><img src="fotos/marte.jpeg" alt="Planeta 2 marte" width="200"></a>
-			<a href="fotos/tierra.jpeg" target="iframeplanet"><img src="fotos/tierra.jpeg" alt="Planeta 3 tierra" width="250"></a>
-			<a href="fotos/jupiter.jpeg" target="iframeplanet"><img src="fotos/jupiter.jpeg" alt="Planeta 4 jupiter" width="200"></a>
-		</td>
-	</tr>
-	</table>
-	<figure align="center">
-		<iframe name="iframeplanet" width="300" height="200"></iframe>
-	</figure>
+	<h2>Funciones reservadas.</h2>
+	<h3>Práctica 1</h3>
+	<div>
+		<form name="formu" id="formu">
+			<label for="nombre">Escribe una cadena de caracteres</label>
+			<input type="text" id="cadena" name="cad" ><br/>
+		</form>
+			<input type="submit" value="Enviar formulario" onclick="evalua()"><p id="parrafo"></p>
+	</div>
 </body>
 </html>
