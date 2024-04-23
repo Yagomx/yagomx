@@ -34,6 +34,27 @@
 <div class="caja4">
 		<p><h1 >Análisis de Datos</h1><br>El análisis de datos es el proceso de inspeccionar, limpiar, transformar y modelar grandes volúmenes de datos con el objetivo de descubrir información útil, llegar a conclusiones y respaldar la toma de decisiones. Implica examinar conjuntos de datos para extraer patrones, tendencias, relaciones o insights que puedan ser valiosos para comprender un fenómeno, tomar decisiones informadas o resolver problemas. El análisis de datos se lleva a cabo en diversas disciplinas y campos, como la ciencia de datos, la estadística, la investigación de mercado y la inteligencia empresarial. Es una herramienta clave para la toma de decisiones y la mejora de los procesos empresariales</p>
 	</div>
+<div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">¿Qué es el big data?</div>
+            <div class="faq-answer">El big data se refiere al proceso de recolección, almacenamiento y análisis de grandes conjuntos de datos para extraer información significativa y revelar patrones, tendencias y relaciones.</div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
 </h2>
 
 </body>
