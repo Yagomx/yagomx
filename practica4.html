@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2 Javascript</title>
+    <h1>Funciones reservadas</h1>
+    <h2>Practica 2</h2>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            font-weight: bold;
+            color: #333;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 8px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form name="formu" id="formu">
+        <label for="nombre">Escribe tu nombre</label><br/>
+        <input type="text" id="nombre" name="nombre" ><br/>
+        <label for="ap">Escribe tu apellido paterno</label><br/>
+        <input type="text" id="ap" name="ap" ><br/>
+        <label for="am">Escribe tu apellido materno</label><br/>
+        <input type="text" id="am" name="am" ><br/>
+        <label for="anio">Escribe tu año de nacimiento</label><br/>
+        <input type="text" id="anio" name="anio" ><br/>
+        <label for="mes">Escribe tu mes de nacimiento</label><br/>
+        <input type="text" id="mes" name="mes" ><br/>
+        <label for="dia">Escribe tu día de nacimiento</label><br/>
+        <input type="text" id="dia" name="dia" ><br/>
+        <label for="resultado">Resultado</label><br/>
+        <input type="text" id="resultado" name="resultado" readonly><br/><br/>
+        <input type="button" value="Generar el RFC" onclick="genera_rfc()" >
+    </form>
+
+    <script>
+        function genera_rfc() {
+            var nombre = document.getElementById("nombre").value.toUpperCase();
+            var ap = document.getElementById("ap").value.toUpperCase();
+            var am = document.getElementById("am").value.toUpperCase();
+            var anio = document.getElementById("anio").value.slice(-2);
+            var mes = document.getElementById("mes").value.padStart(2, '0');
+            var dia = document.getElementById("dia").value.padStart(2, '0');
+
+            var rfc = ap.slice(0, 2) + am.slice(0, 1) + nombre.slice(0, 1) + anio + mes + dia;
+
+            document.getElementById("resultado").value = rfc;
+        }
+    </script>
+</body>
+</html>
+
