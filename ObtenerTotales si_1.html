@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=4;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "20 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "15 puntos. Regular. \r Obtuviste 3 preguntas correctas");
+doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Tu opinión es importante</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>¿Cuál de estas comidas es de origen mexicano?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>Chiles en nogada Pregunta 1<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Lasaña Pregunta 1<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Pizza Pregunta 1<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Ravioles Pregunta 1<br/>
+		
+		<li>¿A qué rama animal pertenece la araña?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Felino Pregunta 2<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>Arácnido Pregunta 2<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Anfibio Pregunta 2<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Pez Pregunta 2<br/>
+
+		<li>¿Qué estado del agua moja?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Sólido Pregunta 3<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Líquido Pregunta 3<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Gaseoso Pregunta 3<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Gel Pregunta 3<br/>
+
+        <li>¿Cómo le llamaban al pulque los mexicas?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Pulqtl Pregunta 4<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Pulque Pregunta 4<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Octli Pregunta 4<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Pulctli Pregunta 4<br/>
+
+		<li>¿De quién es la pintura de la noche estrellada?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Leonardo Da Vinci Pregunta 5<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Vicent Va Gogh Pregunta 5<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Salvador Dali Pregunta 5<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Picasso Pregunta 5<br/>
+
+		<li>¿En qué pais se ponen ofrendas a los muertos el 1 y 2 de noviembre?</li>
+		<input type="radio" name="r4" id="r4" value="5"/>México Pregunta 6<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Argentina Pregunta 6<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Alemania Pregunta 6<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>España Pregunta 6<br/>
+
+		<li>¿Cómo se llama el planeta que tiene los anillos?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Pluton Pregunta 7<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Saturno Pregunta 7<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Tierra Pregunta 7<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Jupiter Pregunta 7<br/>
+
+		<li>¿Qué ciudad tiene canales de agua en lugar de calles?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Florencia Pregunta 8<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Venecia Pregunta 8<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Roma Pregunta 8<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Sienna Pregunta 8<br/>
+
+		<li>¿En qué estado se encuentra Tula de Allende?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Sinaloa Pregunta 9<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Tamaulipas Pregunta 9<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Veracruz Pregunta 9<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Hidalgo Pregunta 9<br/>
+
+		<li>¿Cuál es el nombre de las tradicional espada utilizada por los Samurais??</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Kanshou Pregunta 10<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Wakizashi Pregunta 10<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Samurai Pregunta 10<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Katana Pregunta 10<br/>
+
+
+
+
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
