@@ -1,0 +1,45 @@
+/* Estilos para el contenedor principal del carrusel */
+.carousel {
+  position: relative; /* Se posiciona relativamente para posicionar los botones dentro de él */
+  max-width: 600px; /* Establece el ancho máximo del carrusel */
+  margin: auto; /* Centra horizontalmente el carrusel en su contenedor padre */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga del carrusel */
+}
+
+/* Estilos para el contenedor de los slides del carrusel */
+.carousel-content {
+  display: flex; /* Utiliza flexbox para alinear horizontalmente los slides */
+}
+
+/* Estilos para las imágenes dentro del carrusel */
+.carousel-content img {
+  width: 100%; /* Establece el ancho de las imágenes al 100% del contenedor */
+  display: none; /* Oculta las imágenes por defecto */
+}
+
+/* Estilos para la imagen activa que se mostrará */
+.carousel-content img.active {
+  display: block; /* Muestra la imagen activa */
+}
+
+/* Estilos para los botones de navegación */
+button {
+  position: absolute; /* Se posiciona absolutamente para moverlos dentro del carrusel */
+  top: 50%; /* Posiciona los botones verticalmente en el centro del carrusel */
+  transform: translateY(-50%); /* Centra verticalmente los botones */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para los botones */
+  color: white; /* Color del texto de los botones */
+  border: none; /* Sin bordes */
+  padding: 10px; /* Añade relleno alrededor del texto de los botones */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+}
+
+/* Estilos específicos para el botón "previo" */
+#prevBtn {
+  left: 0; /* Se posiciona en el lado izquierdo del carrusel */
+}
+
+/* Estilos específicos para el botón "siguiente" */
+#nextBtn {
+  right: 0; /* Se posiciona en el lado derecho del carrusel */
+}
