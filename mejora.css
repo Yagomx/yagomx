@@ -1,0 +1,89 @@
+body {
+  background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #f0f0f0; /* Light grey text for better contrast */
+  font-family: 'Montserrat', sans-serif; /* Modern font */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for a frosted glass look */
+  border-bottom: 1px solid #fff; /* Subtle border */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f0f0f0;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  font-weight: 600; /* Semi-bold text */
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #1B4E7A;
+  color: #ffeb3b; /* Vibrant yellow text on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#t1 {
+  background: linear-gradient(135deg, rgba(102, 145, 212, 0.8), rgba(80, 125, 190, 0.8)); /* Gradient background */
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 15px;
+  padding: 20px; /* Increase padding */
+  margin: 20px auto; /* Center the element with auto margins */
+  width: 80%; /* Control the width */
+  max-width: 600px; /* Maximum width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#t1:hover {
+  transform: scale(1.05); /* Enlarge slightly on hover */
+  background: linear-gradient(135deg, rgba(80, 125, 190, 0.9), rgba(102, 145, 212, 0.9)); /* Change gradient on hover */
+}
+
+/* Additional enhancements */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: -1; /* Behind everything */
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 30px;
+  }
+  
+  .nav-link {
+    margin: 5px 0;
+  }
+
+  #t1 {
+    width: 90%;
+    font-size: 16px;
+  }
+}
