@@ -20,6 +20,33 @@ header h1 {
     margin: 0;
 }
 
+nav a{
+	font-weight: 600;
+	padding-right: 100px;
+}
+.nav-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Establece el color del texto */
+  padding: 10px 20px; /* Agrega espacio alrededor del texto */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+}
+.nav-link:hover {
+  background-color: #68c5b7; /* Nuevo color de fondo */
+  color: #fff; /* Nuevo color de texto */
+}
+nav ul {
+  list-style: none; 
+  display: flex; 
+  padding: 0;
+  margin: 0; 
+}
+nav ul li {
+  margin-right: 20px; 
+}
+@font-face{
+	font-family: "parrafos";
+	src: url("Nicolast.ttf") format("truetype");
+}
 nav ul {
     list-style: none;
     padding: 0;
