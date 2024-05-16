@@ -65,34 +65,6 @@ header nav {
             display: block;
         }
 
-nav ul {
-  list-style: none; 
-  display: flex; 
-  padding: 0;
-  margin: 0; 
-}
-nav ul li {
-  margin-right: 20px; 
-}
-@font-face{
-	font-family: "parrafos";
-	src: url("Nicolast.ttf") format("truetype");
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
 main {
     padding: 20px;
 }
