@@ -1,0 +1,92 @@
+body {
+  background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+  background-size: cover; 
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+/*Navegador*/
+header {
+	background-color: black;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 20px 60px; /* Espaciado alrededor del contenido del header */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas múltiples */
+}
+header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+/*Cuerpo*/
+h1{
+	color: white;
+	font-size: 40px;
+	text-align: center;
+}
+table{
+	margin: 0 auto;
+}
+video{
+	width: 250px;
+	height: 250px;
+	
+}
+td{
+	align-items: center;
+	background-color: black;
+	border: 5px solid white;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+td:hover{
+	background-color: black;
+	border: 5px solid white;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	transform: scale(1.5,1.5);
+	-moz-transform: scale(1.5,1.5);
+	-webkit-transform: scale(1.5,1.5);
+}
