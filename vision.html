@@ -29,20 +29,51 @@
 			top: 0;
 			z-index: 1000;
 		}
-		.nav-link {
-			text-decoration: none;
-			color: #f0f0f0;
-			padding: 10px 20px;
-			transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-			font-weight: 600;
-			border-radius: 5px;
-		}
-		.nav-link:hover {
-			background-color: #1B4E7A;
-			color: #ffeb3b;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-			transform: scale(1.1);
-		}
+		header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 		h1 {
 			text-align: center;
 			color: #fff;
@@ -92,15 +123,33 @@
 <body>
 	<header>
 		<nav>
-			<a href="BigData.html" class="nav-link">Inicio</a>
-			<a href="Historia.html" class="nav-link">Historia</a>
-			<a href="Objetivo.html" class="nav-link">Objetivo</a>
-			<a href="actual.html" class="nav-link">¿Qué se espera?</a>
-			<a href="futuro.html" class="nav-link">Visión a Futuro</a>
-			<a href="Imagenes.html" class="nav-link">Imagenes</a>
-			<a href="beneficios" class="nav-link">Beneficios</a>
-			<a href="fucion" class="nav-link">Como funciona</a>
-			<a href="pregfrec.html" class="nav-link">Preguntas Frecuentes</a>
+			<a href="BD.html" class="nav-link">Inicio</a>
+            <a href="history.html" class="nav-link">Historia</a>
+            <a href="OB.html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto.html">Impacto</a>
+                    <a href="situacion.html">Situación Actual</a>
+                    <a href="vision.html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="Imagenes.html">Imágenes</a>
+                    <a href="Videos.html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href=".html">Contactanos</a>
+                  <a href="Redes.html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
 		</nav>
 	</header>
 	<h1>Visión a Futuro</h1>
