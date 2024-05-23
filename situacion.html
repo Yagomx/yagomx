@@ -27,29 +27,51 @@
             font-family: 'Helvetica', sans-serif;
         }
 
-        nav a{
-    font-weight: 600;
-    padding-right: 100px;
-}
-.nav-link {
-  text-decoration: none; /* Elimina el subrayado */
-  color: white; /* Establece el color del texto */
-  padding: 10px 20px; /* Agrega espacio alrededor del texto */
-  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
-}
-.nav-link:hover {
-  background-color: #68c5b7; /* Nuevo color de fondo */
-  color: #fff; /* Nuevo color de texto */
-}
-nav ul {
-  list-style: none; 
-  display: flex; 
-  padding: 0;
-  margin: 0; 
-}
-nav ul li {
-  margin-right: 20px; 
-}
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 @font-face{
     font-family: "parrafos";
     src: url("Nicolast.ttf") format("truetype");
@@ -132,26 +154,35 @@ nav ul li {
 <body>
     <header>
         <nav>
-        <a href="BigData.html" class="nav-link">Inicio</a>
-        <a href="Historia.html" class="nav-link">Historia</a>
-        <a href="Objetivo.html" class="nav-link">Objetivo</a>
-        <a href="impacto.html" class="nav-link">Impacto</a>
-        <a href="actual.html" class="nav-link">¿Qué se espera?</a>
-        <a href="futuro.html" class="nav-link">Visión a Futuro</a>
-        <a href="Imagenes.html" class="nav-link">Imagenes</a>
-        <a href="beneficios" class="nav-link">Beneficios</a>
-        <a href="fucion" class="nav-link">Como funciona</a>
-        <a href="pregfrec.html" class="nav-link">Preguntas frecuentes</a>
+       <a href="BD.html" class="nav-link">Inicio</a>
+            <a href="history.html" class="nav-link">Historia</a>
+            <a href="OB.html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto.html">Impacto</a>
+                    <a href="situacion.html">Situación Actual</a>
+                    <a href="vision.html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="Imagenes.html">Imágenes</a>
+                    <a href="Videos.html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href=".html">Contactanos</a>
+                  <a href="Redes.html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
     </nav>
         <h1>Situación Actual del Big Data y Análisis de Datos</h1>
-        <nav>
-            <ul>
-                <li><a href="#adopcion">Adopción</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
-                <li><a href="#desafios">Desafíos</a></li>
-                <li><a href="#futuro">Futuro</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
         <section id="adopcion">
