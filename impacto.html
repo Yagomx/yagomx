@@ -5,6 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impacto del Big Data y el Análisis de Datos</title>
     <link rel="stylesheet" href="diseno.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 700;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        nav .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        nav .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        nav .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        nav .dropdown:hover .nav-link {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            font-weight: 700;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .chart {
+            grid-column: span 2;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .chart {
+                grid-column: span 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,17 +125,17 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <a href="#" class="nav-link">Recursos <i class="fas fa-caret-down"></i></a>
                 <div class="dropdown-content">
                     <a href="Imagenes.html">Imágenes</a>
                     <a href="Videos.html">Videos</a>
                 </div>
             </div>
-             <div class="dropdown">
-                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Información de contacto <i class="fas fa-caret-down"></i></a>
                 <div class="dropdown-content">
-                  <a href=".html">Contactanos</a>
-                  <a href="Redes.html">Redes</a>
+                    <a href=".html">Contáctanos</a>
+                    <a href="Redes.html">Redes</a>
                 </div>
             </div>
             <a href="Blog.html" class="nav-link">Blog</a>
@@ -39,17 +143,12 @@
         </nav>
         <h1>Impacto del Big Data y el Análisis de Datos</h1>
     </header>
-    <nav>
-                <li><a href="#vida-cotidiana">Vida Cotidiana</a></li>
-                <li><a href="#sector-laboral">Sector Laboral</a></li>
-                <li><a href="#sector-comercial">Sector Comercial</a></li>
-                <li><a href="#conclusiones">Conclusiones</a></li>
-        </nav>
     <main>
         <section id="vida-cotidiana">
             <h2>Vida Cotidiana</h2>
             <p>El Big Data influye en nuestra vida diaria de muchas maneras, desde las recomendaciones personalizadas en plataformas de streaming como Netflix, hasta las sugerencias de productos en tiendas online como Amazon. Además, las aplicaciones de salud y fitness recopilan y analizan datos sobre nuestros hábitos para proporcionarnos recomendaciones personalizadas que mejoran nuestra calidad de vida.</p>
         </section>
+        
         <section id="sector-laboral">
             <h2>Sector Laboral</h2>
             <p>En el sector laboral, el análisis de datos permite a las empresas tomar decisiones más informadas y estratégicas. Por ejemplo, mediante el análisis de datos de desempeño, las empresas pueden identificar áreas de mejora y oportunidades de formación para sus empleados. Además, los datos pueden ayudar en la gestión de recursos humanos, optimizando procesos de contratación y reteniendo talento clave.</p>
@@ -62,10 +161,44 @@
             <h2>Conclusiones</h2>
             <p>El Big Data y el análisis de datos seguirán teniendo un impacto significativo en diversos aspectos de nuestra vida y sectores económicos. A medida que las tecnologías avanzan, las posibilidades de aplicación y los beneficios del Big Data continuarán expandiéndose, ofreciendo nuevas oportunidades para mejorar la eficiencia y la personalización en muchos campos.</p>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Impacto del Big Data. Todos los derechos reservados.</p>
-    </footer>
-    <script src="scripts.js"></script>
-</body>
+        <section class="chart">
+            <h2>Gráfico de Impacto</h2>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Año', 'Zettabytes'],
+          ['2020', 64.2],
+          ['2021', 100],
+          ['2022', 120],
+          ['2023', 140],
+          ['2024', 160],
+          ['2025', 180]
+        ]);
+
+        var options = {
+          title: 'Crecimiento de Big Data',
+          hAxis: {
+            title: 'Zettabytes',
+            format: 'string',
+          },
+          vAxis: {
+            title: 'Año'
+          },
+          bars: 'vertical'
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div"></div>
+    <h3>¿Qué es un Zettabyte?</h3>
+    <p>Un Zettabyte es una unidad de almacenamiento de datos y se considera la medida más grande de almacenamiento de información. Esta unidad se utiliza para referirse a cantidades masivas de información digital, como archivos, vídeos, imágenes y otros contenidos digitales. Un Zettabyte es equivalente a mil billones (1021) bytes.</p>
+  </body>
 </html>
