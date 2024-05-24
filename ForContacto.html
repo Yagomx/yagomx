@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+    }
+
+    form {
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        color: #333333;
+    }
+
+    button[type="submit"] {
+        background-color: #007BFF;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+
+    <form
+        action="https://formspree.io/f/xjvndodg"
+        method="POST"
+    >
+      <label>
+        Tu email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Tu mensaje:
+        <textarea name="message"></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!--<script>
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Aquí es donde necesitarías enviar la información a tu servidor para enviar el correo electrónico
+            // Por ejemplo, podrías hacer una solicitud AJAX a tu servidor aquí
+            console.log("Enviar correo electrónico a 183447@upslp.edu.mx con el nombre: " + name + ", correo electrónico: " + email + ", mensaje: " + message);
+        }
+    </script>-->
+</body>
+</html>
