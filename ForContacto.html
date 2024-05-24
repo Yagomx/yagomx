@@ -2,68 +2,80 @@
 <html>
 <head>
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 50px;
-    }
+       body {
+            background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #2c3e50; /* Color de respaldo */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            }
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: white;
+        }
     header {
-			background-color: #333;
-			color: white;
-			padding: 10px 0;
-		}
-		nav {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		nav a {
-			color: white;
-			text-decoration: none;
-			padding: 10px 15px;
-			font-weight: 700;
-			display: block;
-			transition: background-color 0.3s ease;
-		}
-		nav a:hover {
-			background-color: #575757;
-			border-radius: 5px;
-		}
-		nav .dropdown {
-			position: relative;
-			display: inline-block;
-		}
-		nav .dropdown-content {
-			display: none;
-			position: absolute;
-			background-color: #333;
-			min-width: 160px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;
-		}
-		nav .dropdown-content a {
-			color: white;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-			text-align: left;
-		}
-		nav .dropdown-content a:hover {
-			background-color: #575757;
-		}
-		nav .dropdown:hover .dropdown-content {
-			display: block;
-		}
-		nav .dropdown:hover .nav-link {
-			background-color: #575757;
-			border-radius: 5px;
-		}
-    h1 {
-			text-align: center;
-			margin-top: 20px;
-			color: white;
-			font-weight: 700;
-		}
+            background: 141660;
+            color: white;
+            padding: 1em 0;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+         h1 {
+            color: white;
+            text-align: center;
+            margin: 0.5em 0;
+        }
+
+
     form {
         background-color: #ffffff;
         border-radius: 5px;
@@ -103,39 +115,38 @@
     </style>
 </head>
 <body>
-<header>
-    <nav>
-		<a href="BigData.html" class="nav-link">Inicio</a>
-		<a href="Historia.html" class="nav-link">Historia</a>
-		<a href="objetivo.html" class="nav-link">Objetivo</a>
-		<div class="dropdown">
-			<a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
-			<div class="dropdown-content">
-				<a href="impacto.html">Impacto</a>
-				<a href="actual.html">Situación</a>
-				<a href="futuro.html">Visión a Futuro</a>
-			</div>
-		</div>
-		<div class="dropdown">
-			<a href="#" class="nav-link">Recursos <i class="fas fa-caret-down"></i></a>
-			<div class="dropdown-content">
-				<a href="Imagenes.html">Imágenes</a>
-				<a href="Videos.html">Videos</a>
-			</div>
-		</div>
-		<div class="dropdown">
-			<a href="#" class="nav-link">Contacto <i class="fas fa-caret-down"></i></a>
-			<div class="dropdown-content">
-				<a href=".html">Contáctanos</a>
-				<a href="Redes.html">Redes</a>
-			</div>
-		</div>
-		<a href="Blog.html" class="nav-link">Blog</a>
-		<a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
-	</nav>
-</header>
-    <h1>Contactanos</h1>
-
+    <header>
+        <nav>
+            <a href="BD.html" class="nav-link">Inicio</a>
+            <a href="history.html" class="nav-link">Historia</a>
+            <a href="OB.html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto.html">Impacto</a>
+                    <a href="situacion.html">Situación Actual</a>
+                    <a href="vision.html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="Imagenes.html">Imágenes</a>
+                    <a href="Videos.html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href="ForContacto.html">Contactanos</a>
+                  <a href="Redes.html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
+        </nav>
+    </header>
+    <h1>Contacto</h1>
     <form
         action="https://formspree.io/f/xjvndodg"
         method="POST"
