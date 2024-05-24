@@ -4,15 +4,141 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Galeria</title>
-	<link rel="stylesheet" type="text/css" href="imagenes.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+        body {
+            background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #2c3e50; /* Color de respaldo */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            }
+        header {
+			background-color: #333;
+			color: white;
+			padding: 10px 0;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 10px 15px;
+			font-weight: 700;
+			display: block;
+			transition: background-color 0.3s ease;
+		}
+		nav a:hover {
+			background-color: #575757;
+			border-radius: 5px;
+		}
+		nav .dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		nav .dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #333;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		nav .dropdown-content a {
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+		nav .dropdown-content a:hover {
+			background-color: #575757;
+		}
+		nav .dropdown:hover .dropdown-content {
+			display: block;
+		}
+		nav .dropdown:hover .nav-link {
+			background-color: #575757;
+			border-radius: 5px;
+		}
+		h1{
+			font-family: 'Danfo', serif ;
+			color: white;
+			text-align:center;
+			font-size: 100px;
+		}
+
+		.danfo {
+		  font-family: "Danfo", serif;
+		  font-optical-sizing: auto;
+		  font-weight: 350;
+		  font-style: normal;
+		  font-variation-settings:"ELSH" 0;
+		}
+
+		/*Tabla de imagenes*/
+		table {
+		    width: 90%; /* Asegura que la tabla use todo el ancho disponible */
+		    margin: auto; /* Centra la tabla horizontalmente */
+		}
+
+		td {
+				width: 200px;
+		    text-align: center; /* Centra el contenido de cada celda */
+		    vertical-align: middle; /* Alinea verticalmente el contenido en el medio */
+		}
+
+		td img {
+		    max-width: 100%; /* Establece un ancho máximo para la imagen */
+		    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+		    display: block; /* La imagen se comporta como un bloque */
+		    margin: auto; /* Centra la imagen horizontalmente */
+		    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin perder proporciones */
+		}
+		@media (max-width: 768px) {
+		    .nav-link {
+		        padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeñas */
+		    }
+		}
+		ul.objectives-list {
+				list-style: none;
+				padding-left: 20px;
+			}
+		ul.objectives-list li {
+				margin: 10px 0;
+				display: flex;
+				align-items: center;
+			}
+		ul.objectives-list li::before {
+				content: '•';
+				color: #ff6600;
+				margin-right: 10px;
+				font-size: 20px;
+			}
+	    .carousel-inner img {
+				position: relative;
+				  max-width: 600px;/*Limita el ancho maximo a 600px*/
+				  margin: auto;/*Centra horizontalmente */
+				  overflow: hidden;/*Oculta el exeso de la imagen*/
+			}
+  </style>
+  
 </head>
 <body>
 <header><!--Navegador-->
-	<nav>
-		<a href="BD.html" class="nav-link">Inicio</a>
+	 <nav>
+             <a href="BD.html" class="nav-link">Inicio</a>
             <a href="history.html" class="nav-link">Historia</a>
             <a href="OB.html" class="nav-link">Objetivo</a>
             <div class="dropdown">
@@ -33,27 +159,47 @@
              <div class="dropdown">
                 <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
                 <div class="dropdown-content">
-                  <a href=".html">Contactanos</a>
+                  <a href="ForContacto.html">Contactanos</a>
                   <a href="Redes.html">Redes</a>
                 </div>
             </div>
             <a href="Blog.html" class="nav-link">Blog</a>
             <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
-	</nav>
+        </nav>
 </header>
 <h1 class="danfo">Galeria</h1>
-<div class="carousel"><!--Contenedor para el carruser el imagenes que se le puede aplicar estilos o funciones -->
-	<button id="prevBtn">&#10094;</button><!--Un botón para retroceder en el carrusel.-->
-	<div class="carousel-content"><!--Contiene la imagenes-->
-		<!--Aquí se encuentran las imagenes con su ruta y un texto alternativo-->
-		<img src="imagen12.jpg" alt="Image 1">
-		<img src="imagen22.jpg" alt="Image 2">
-		<img src="imagen32.jpg" alt="Image 3">
-		<img src="imagen42.jpg" alt="Image 4">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <!-- Indicadores -->
+  	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="https://th.bing.com/th/id/OIP.FQ5KUnj-mMXtRgCuUO0xLQHaEK?rs=1&pid=ImgDetMain" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+			<img src="https://th.bing.com/th/id/R.b0f66756a43b3b45c9cd30976da745f9?rik=FUc04pRwcr0DLg&riu=http%3a%2f%2fwww.quickmeme.com%2fimg%2f2c%2f2c5e1186ef90a8b2a9074518f9efbfcc4ba1a2076dcf78903ad6e6ee5ee4eb4a.jpg&ehk=3t%2flyL3f2hckxpMKiKB1%2b04w%2f7RGdb71oFfdE1Br%2bvs%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+			<img src="https://th.bing.com/th/id/OIP.55fUbh_IEDj8KjPJvHcwVAAAAA?rs=1&pid=ImgDetMain" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+			<img src="https://media.makeameme.org/created/big-data-big-ce2802fe07.jpg" class="d-block w-100" alt="...">
+		</div>
+		 <!-- Controles -->
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Anterior</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Siguiente</span>
+	  </a>
 	</div>
-	<button id="nextBtn">&#10095;</button><!--Un botón para avanzar en el carrusel.-->
 </div>
-	<script src="imagenes.js"></script>
 <table>
 	<br>
 <caption></caption>
