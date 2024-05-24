@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Apuntes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="Blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="Blog.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	 <nav>
+            <a href="BD.html" class="nav-link">Inicio</a>
+            <a href="history.html" class="nav-link">Historia</a>
+            <a href="OB.html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto.html">Impacto</a>
+                    <a href="situacion.html">Situación Actual</a>
+                    <a href="vision.html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="Imagenes.html">Imágenes</a>
+                    <a href="Videos.html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href="ForContacto.html">Contactanos</a>
+                  <a href="Redes.html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
+        </nav>
+</header>
+</br>
+	<h1 class="poetsen-one-regular">Blog de notas </h1>
+	<h2>Realiza las notas que necesites</h2>
+	<section id="cajaformulario">
+		<form name="formulario">
+			<p>Tema: <br><input type="text" name="clave" id="clave"></p>
+			<p>Información: <br><textarea name="text" id="texto"></textarea></p>
+			<p><input type="button" name="grabar" id="grabar"
+			value="Guardar"></p>
+			<p><input type="button" name="eliminar" id="eliminar"
+			value="Borrar datos" onclick="elimina()"></p>
+		</form>
+	</section>
+	<section id="cajadatos">
+	Aún no registras información
+	</section>
+</body>
+</html>
